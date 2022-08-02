@@ -1,17 +1,24 @@
 package com.jap.addevens;
 
+import java.util.Scanner;
+
 public class AddEven
 {
     //Write the logic to add evens in the methods
-    public long addEvens(int n)    {
-      return  -1;
+    public long addEvens(int n){
+        int sum=0;
+        for(int i=2;i<=n;i+=2){
+            sum+=i;
+        }
+        System.out.println(sum);
+      return sum;
     }
         public static void main(String[] args) {
-        // Initialize the object of AddEven class
+            Scanner scanner=new Scanner(System.in);
+            System.out.println("Enter any number");
+            int n = scanner.nextInt();
             AddEven addEven = new AddEven();
-            // Declare a variable to give as input to the addEvens method
-
-            // Call the addEvens method and display the result
+            addEven.addEvens(n);
 
         }
 
